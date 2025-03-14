@@ -1,0 +1,50 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "useDefineForClassFields": true,
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      // uni-app + Vue 3 使用 Vite 构建，需要安装 vite
+      "vite/client",
+      // uni API 相关的 TypeScript 类型，需要安装 @dcloudio/types
+      "@dcloudio/types",
+      // alipay API 相关的 TypeScript 类型，需要安装 @mini-types/alipay
+      "@mini-types/alipay",
+      // wx API 相关的 TypeScript 类型，需要安装 miniprogram-api-typings
+      "miniprogram-api-typings",
+      // Wot Design Uni 组件提供 TypeScript 类型，需要安装 wot-design-uni
+      "wot-design-uni/global",
+      // 为 uni-app 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-types
+      "@uni-helper/uni-types",
+      // 为 pinia-plugin-persist-uni 插件提供 TypeScript 类型，需要安装 pinia-plugin-persist-uni
+      "pinia-plugin-persist-uni"
+    ],
+    "strict": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "**/*.d.ts",
+    "**/*.tsx",
+    "**/*.ts",
+    "**/*.vue",
+    "types/**/*.d.ts"
+  ],
+  "vueCompilerOptions": {
+    // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
+    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  }
+}
