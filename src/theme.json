@@ -1,26 +1,34 @@
 {
   "light": {
-    "bgColor": "#fcfcfc",
-    "bgColorBottom": "#fcfcfc",
-    "bgColorTop": "#ff6b00",
-    "bgTxtStyle": "dark",
-    "navBgColor": "#ff6b00",
-    "navTxtStyle": "white",
-    "tabBgColor": "#fcfcfc",
-    "tabBorderStyle": "black",
-    "tabFontColor": "#1f2937",
-    "tabSelectedColor": "#ff6b00"
+    "bgColor": "#ffffff",
+    "bgColorBottom": "#efefef",
+    "bgColorTop": "#eeeeee",
+    "bgTxtStyle": "light",
+    "navBgColor": "#f8f8f8",
+    "navTxtStyle": "black"
+    // "tabFontColor": "#000000",
+    // "tabSelectedColor": "#3cc51f",
+    // "tabBgColor": "#ffffff",
+    // "tabBorderStyle": "black",
+    // "iconPath1": "/static/icon1_light.png",
+    // "selectedIconPath1": "/static/selected_icon1_light.png",
+    // "iconPath2": "/static/icon2_light.png",
+    // "selectedIconPath2": "/static/selected_icon2_light.png"
   },
   "dark": {
-    "bgColor": "#181818",
-    "bgColorBottom": "#181818",
-    "bgColorTop": "#ff6b00",
-    "bgTxtStyle": "light",
-    "navBgColor": "#ff6b00",
-    "navTxtStyle": "white",
-    "tabBgColor": "#181818",
-    "tabBorderStyle": "white",
-    "tabFontColor": "#f3f4f6",
-    "tabSelectedColor": "#ff6b00"
+    "bgColor": "#1f1f1f",
+    "bgColorBottom": "#1f1f1f",
+    "bgColorTop": "#292929",
+    "bgTxtStyle": "dark",
+    "navBgColor": "#292929",
+    "navTxtStyle": "white"
+    // "tabFontColor": "#ffffff",
+    // "tabSelectedColor": "#51a937",
+    // "tabBgColor": "#292929",
+    // "tabBorderStyle": "white",
+    // "iconPath1": "/static/icon1_dark.png",
+    // "selectedIconPath1": "/static/selected_icon1_dark.png",
+    // "iconPath2": "/static/icon2_dark.png",
+    // "selectedIconPath2": "/static/selected_icon2_dark.png"
   }
 }

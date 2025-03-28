@@ -1,5 +1,5 @@
 {
-  "name": "uni-vue3",
+  "name": "uni-vue3-template",
   "appid": "",
   "description": "",
   "versionName": "1.0.0",
@@ -40,7 +40,16 @@
         ]
       },
       "ios": {},
-      "sdkConfigs": {}
+      "sdkConfigs": {},
+      "darkmode": true,
+      "themeLocation": "theme.json",
+      "safearea": { // iOS平台的安全区域
+        "background": "#ffffff",
+        "backgroundDark": "#2f0508", // HX 3.1.19+支持
+        "bottom": {
+          "offset": "auto"
+        }
+      }
     }
   },
   "h5": {
@@ -58,7 +67,8 @@
     "themeLocation": "theme.json"
   },
   "mp-alipay": {
-    "usingComponents": true
+    "usingComponents": true,
+    "styleIsolation": "shared"
   },
   "mp-baidu": {
     "usingComponents": true

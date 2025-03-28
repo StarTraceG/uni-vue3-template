@@ -25,4 +25,15 @@ export default defineConfig({
     // https://unocss-cn.pages.dev/transformers/variant-group#%E5%AE%89%E8%A3%85
     transformerVariantGroup(), // 启用 UnoCSS 的 Windi CSS 变体组功能，即：() 分组功能
   ],
+  rules: [
+    [
+      'p-safe',
+      {
+        padding:
+          'env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)',
+      },
+    ],
+    ['pt-safe', { 'padding-top': 'env(safe-area-inset-top)' }],
+    ['pb-safe', { 'padding-bottom': 'env(safe-area-inset-bottom)' }],
+  ],
 })

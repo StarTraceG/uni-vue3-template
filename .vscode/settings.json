@@ -6,9 +6,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit",
-    "source.organizeImports": "never"
+    "source.fixAll": "explicit"
   },
   "prettier.enable": false,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
   "editor.formatOnSave": true,
   "eslint.validate": [
     "javascript",
@@ -44,5 +46,14 @@
     "vue"
   ],
   "stylelint.enable": true, // 开启stylelint
-  "scss.lint.unknownAtRules": "ignore" // 解决 unocss @apply 警告问题
+  "scss.lint.unknownAtRules": "ignore", // 解决 unocss @apply 警告问题
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

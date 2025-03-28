@@ -60,6 +60,12 @@ pnpm i
 pnpm dev:对应平台 如 pnpm dev:mp-weixin
 ```
 
+### 查看已启用的 ESLint 规则
+
+```bash
+npx @eslint/config-inspector
+```
+
 ### 构建
 
 构建该应用只需要执行以下命令

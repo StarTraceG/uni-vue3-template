@@ -1,18 +1,11 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "useDefineForClassFields": true,
+    "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "resolveJsonModule": true,
     "types": [
       // uni-app + Vue 3 使用 Vite 构建，需要安装 vite
       "vite/client",
@@ -29,22 +22,24 @@
       // 为 pinia-plugin-persist-uni 插件提供 TypeScript 类型，需要安装 pinia-plugin-persist-uni
       "pinia-plugin-persist-uni"
     ],
-    "strict": true,
-    "noImplicitThis": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true
+    "allowJs": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "**/*.d.ts",
-    "**/*.tsx",
-    "**/*.ts",
-    "**/*.vue",
-    "types/**/*.d.ts"
-  ],
   "vueCompilerOptions": {
     // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
     "plugins": ["@uni-helper/uni-types/volar-plugin"]
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.vue",
+    "src/**/*.json",
+    "types/**/*.d.ts"
+  ],
+  "exclude": ["node_modules", "uni_modules", "dist", "**/*.js"]
 }

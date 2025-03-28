@@ -5,35 +5,28 @@ export default uniHelper(
     uni: true,
     uniJson: true,
     unocss: true,
+    typescript: true,
     vue: {
       overrides: {
-        'vue/custom-event-name-casing': ['kebab-case' | 'camelCase'],
-        'vue/singleline-html-element-content-newline': 'off',
-        'vue/multiline-html-element-content-newline': 'off',
-        'vue/max-attributes-per-line': 'off',
-        'vue/attributes-order': 'off',
-        'vue/one-component-per-file': 'off',
-        'vue/html-closing-bracket-newline': 'off',
-        'vue/attribute-hyphenation': 'off',
-        'vue/require-default-prop': 'off',
-        'vue/require-explicit-emits': 'off',
-        'vue/html-self-closing': [
-          'error',
-          {
-            html: {
-              void: 'always',
-              normal: 'never',
-              component: 'always',
-            },
-            svg: 'always',
-            math: 'always',
+        // 强制每行的最大属性数
+        'vue/max-attributes-per-line': ['error', {
+          singleline: {
+            max: 5,
           },
-        ],
-        'vue/multi-word-component-names': 'off',
+          multiline: {
+            max: 1,
+          },
+        }],
+        // 禁止使用控制台
+        'no-console': 'off',
+        // 制使用 function 而不是箭头函数或函数表达式来声明顶级函数
+        'antfu/top-level-function': 'off',
       },
     },
-    typescript: {
-      overrides: {},
-    },
+    formatters: true,
+    // 不再支持 '.eslintignore'，请改用 'ignores' 配置项
+    ignores: [
+      // ...globs
+    ],
   },
 )

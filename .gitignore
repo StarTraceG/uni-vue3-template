@@ -1,6 +1,6 @@
 # 生成文件
 types/components.d.ts
-types/auto-import.d.ts
+types/auto-imports.d.ts
 
 # 其他包管理器LOCK文件
 package-lock.json

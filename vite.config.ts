@@ -1,11 +1,7 @@
 import { resolve } from 'node:path'
-
 import uni from '@dcloudio/vite-plugin-uni'
-import Components from '@uni-helper/vite-plugin-uni-components'
-import { UniUIResolver } from '@uni-helper/vite-plugin-uni-components/resolvers'
 import UniPlatformModifier from '@uni-helper/vite-plugin-uni-platform-modifier'
 import AutoImport from 'unplugin-auto-import/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 import icons from 'unplugin-icons/vite'
 import { defineConfig } from 'vite'
 import UniPolyfill from 'vite-plugin-uni-polyfill'
@@ -42,26 +38,16 @@ export default defineConfig(async () => {
        * @see https://github.com/antfu/unplugin-auto-import
        */
       AutoImport({
-        imports: ['vue', 'pinia', 'uni-app'],
-        dirs: [resolve(getSrcPath(), 'composables')],
+        imports: ['vue', 'pinia', 'uni-app', '@vueuse/core'],
+        dts: resolve(getRootPath(), 'types/auto-imports.d.ts'),
+        dirs: [
+          resolve(getSrcPath(), 'composables'),
+          resolve(getSrcPath(), 'store'),
+          resolve(getSrcPath(), 'utils'),
+        ],
         vueTemplate: true,
-        dts: resolve(getRootPath(), 'types/auto-import.d.ts'),
       }),
 
-      /**
-       * @uni-helper/vite-plugin-uni-components 按需引入组件
-       * 从 unplugin-vue-components 派生并修改以适应UniApp。
-       * 支持的 UI 库：Ano UI、uni-ui、wot-design-uni、uv-ui
-       * 注意：需注册至 uni 之前，否则不会生效
-       * @see https://github.com/uni-helper/vite-plugin-uni-components
-       */
-      Components({
-        resolvers: [UniUIResolver(), IconsResolver()],
-        extensions: ['vue'],
-        deep: true,
-        directoryAsNamespace: true,
-        dts: resolve(getRootPath(), 'types/components.d.ts'),
-      }),
       icons({
         compiler: 'vue3',
       }),
