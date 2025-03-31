@@ -118,6 +118,7 @@
     "unocss-applet": "^0.9.0",
     "unplugin-auto-import": "^19.1.1",
     "unplugin-icons": "^22.1.0",
+    "unplugin-vue-components": "^28.4.1",
     "vite": "5.2.8",
     "vite-plugin-uni-polyfill": "^0.1.0",
     "vite-plugin-vue-devtools": "^7.7.2",

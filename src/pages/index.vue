@@ -13,6 +13,9 @@ onLoad(() => {
 </script>
 
 <template>
+  <view class="px-4 py-4 text-center">
+    <AppLogos />
+  </view>
   <wd-cell title="当前主题" center>
     <view style="height: 32px;">
       {{ theme === 'dark' ? '黑暗模式' : '明亮模式' }}
@@ -26,9 +29,6 @@ onLoad(() => {
       <wd-switch v-model="theme" active-value="dark" inactive-value="light" @change="handleThemeChange" />
     </view>
   </wd-cell>
-  <view px-4 py-4 text-center>
-    <AppLogos />
-  </view>
   <wd-card title="项目集成 UI 组件库部分示例">
     <wd-grid clickable>
       <wd-grid-item

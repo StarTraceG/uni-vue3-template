@@ -4,9 +4,9 @@ const uvSwitch2 = ref(true)
 </script>
 
 <template>
-  <div px-2 py2>
+  <div un-px-2 un-py2>
     <uv-divider text-position="left" text="按钮" />
-    <div mb-2>
+    <div un-mb-2>
       <uv-row justify="space-between" gutter="10">
         <uv-col span="3">
           <uv-button type="primary" size="small" text="确定" />
@@ -38,24 +38,24 @@ const uvSwitch2 = ref(true)
     </uv-row>
 
     <uv-divider text-position="left" text="图标" />
-    <div flex>
-      <uv-icon name="level" size="32" />
+    <div un-flex un-font-size-10>
+      <uv-icon name="level" :size="32" />
       <uv-icon name="home" size="32" />
       <uv-icon name="share-fill" size="32" />
-      <uv-icon name="tags-fill" size="32" />
-      <uv-icon name="mic" size="32" />
-      <uv-icon name="weixin-fill" size="32" />
+      <uv-icon name="tags-fill" :size="32" />
+      <uv-icon name="mic" :size="32" />
+      <uv-icon name="weixin-fill" :size="32" />
     </div>
 
     <uv-divider text-position="left" text="输入框" />
-    <div mb-2>
+    <div un-mb-2>
       <uv-input placeholder="前置插槽">
         <template #prefix>
           <uv-text text="http://" margin="0 3px 0 0" type="tips" />
         </template>
       </uv-input>
     </div>
-    <div mb-2>
+    <div un-mb-2>
       <uv-input placeholder="后置插槽">
         <template #suffix>
           <uv-button text="获取验证码" type="success" size="mini" />
@@ -64,41 +64,41 @@ const uvSwitch2 = ref(true)
     </div>
 
     <uv-divider text-position="left" text="开关" />
-    <div flex>
-      <div mx-2>
+    <div un-flex>
+      <div un-mx-2>
         <uv-switch v-model="uvSwitch1" loading />
       </div>
-      <div mx-2>
+      <div un-mx-2>
         <uv-switch v-model="uvSwitch2" loading />
       </div>
     </div>
 
     <uv-divider text-position="left" text="标签" />
-    <div mb-2 flex>
-      <div mr-2>
+    <div un-mb-2 un-flex>
+      <div un-mr-2>
         <uv-tags text="标签" />
       </div>
-      <div mr-2>
+      <div un-mr-2>
         <uv-tags text="标签" type="warning" />
       </div>
-      <div mr-2>
+      <div un-mr-2>
         <uv-tags text="标签" type="success" />
       </div>
-      <div mr-2>
+      <div un-mr-2>
         <uv-tags text="标签" type="error" />
       </div>
     </div>
-    <div flex>
-      <div mr-2>
+    <div un-flex>
+      <div un-mr-2>
         <uv-tags text="标签" plain />
       </div>
-      <div mr-2>
+      <div un-mr-2>
         <uv-tags text="标签" type="warning" plain />
       </div>
-      <div mr-2>
+      <div un-mr-2>
         <uv-tags text="标签" type="success" plain />
       </div>
-      <div mr-2>
+      <div un-mr-2>
         <uv-tags text="标签" type="error" plain />
       </div>
     </div>

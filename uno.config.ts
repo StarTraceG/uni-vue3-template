@@ -9,7 +9,20 @@ import {
 
 export default defineConfig({
   presets: [
-    presetUni(),
+    /**
+     * unocss uni-app 小程序预设
+     * @see https://github.com/uni-helper/unocss-preset-uni
+     */
+    presetUni({
+      /**
+       * 处理组件属性名与 unocss attributify 模式冲突问题
+       * https://unocss-cn.pages.dev/presets/attributify#属性名称冲突
+       */
+      attributify: {
+        prefix: 'un-',
+        prefixedOnly: true,
+      },
+    }),
     presetIcons({
       scale: 1.2,
       warn: true,

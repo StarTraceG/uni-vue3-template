@@ -1,18 +1,18 @@
 <template>
   <view
-    inline-flex
-    cursor-default
-    text-2xl
-    font-300
+    un-inline-flex
+    un-cursor-default
+    un-text-2xl
+    un-font-300
   >
-    <view flex flex-col hover-class="drop-shadow-md drop-shadow-color-purple5">
+    <view un-flex un-flex-col>
       <image
-        inline-block
-        h-18
-        w-18
+        un-inline-block
+        un-h-18
+        un-w-18
         src="/static/vite.png"
       />
-      <text mt--2 text-purple5>
+      <text un-mt--2 un-text-purple5>
         Vite
       </text>
     </view>

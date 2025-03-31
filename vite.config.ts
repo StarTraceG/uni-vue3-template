@@ -3,6 +3,7 @@ import uni from '@dcloudio/vite-plugin-uni'
 import UniPlatformModifier from '@uni-helper/vite-plugin-uni-platform-modifier'
 import AutoImport from 'unplugin-auto-import/vite'
 import icons from 'unplugin-icons/vite'
+import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import UniPolyfill from 'vite-plugin-uni-polyfill'
 import VueDevTools from 'vite-plugin-vue-devtools'
@@ -46,6 +47,15 @@ export default defineConfig(async () => {
           resolve(getSrcPath(), 'utils'),
         ],
         vueTemplate: true,
+      }),
+
+      /**
+       * unplugin-vue-components 按需引入组件
+       * 注意：需注册至 uni 之前，否则不会生效
+       * @see https://github.com/antfu/vite-plugin-components
+       */
+      Components({
+        dts: resolve(getRootPath(), 'types/components.d.ts'),
       }),
 
       icons({

@@ -138,11 +138,7 @@ const clearSignature = () => {
     <wd-divider content-position="left">
       图标
     </wd-divider>
-    <view font-size-8>
-      <wd-icon name="check" />
-    </view>
-    <wd-icon name="check" size="40px" />
-    <wd-icon name="check" size="40" />
+    <wd-icon name="check" size="22px" />
     <wd-icon name="refresh" size="22px" />
     <wd-icon name="thin-arrow-left" size="22px" />
     <wd-icon name="close" size="22px" />

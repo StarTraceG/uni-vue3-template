@@ -48,7 +48,7 @@ const buttonClick = () => {
 </script>
 
 <template>
-  <div p-2>
+  <div>
     <uni-section title="面包屑" padding>
       <uni-breadcrumb separator="/">
         <uni-breadcrumb-item v-for="(route, index) in routes" :key="index" :to="route.to">
@@ -70,16 +70,16 @@ const buttonClick = () => {
     </uni-section>
 
     <uni-section title="标签" padding>
-      <view mb-4>
-        <uni-tag text="标签" type="primary" mr-2 />
-        <uni-tag text="标签" type="success" inverted mr-2 />
-        <uni-tag text="标签" type="warning" mr-2 />
-        <uni-tag text="标签" type="error" inverted mr-2 />
+      <view un-mb-4>
+        <uni-tag text="标签" type="primary" un-mr-2 />
+        <uni-tag text="标签" type="success" un-mr-2 inverted />
+        <uni-tag text="标签" type="warning" un-mr-2 />
+        <uni-tag text="标签" type="error" inverted un-mr-2 />
         <uni-tag text="标签" />
       </view>
       <view>
-        <uni-tag circle text="标签" type="primary" mr-2 />
-        <uni-tag mark text="标签" type="primary" size="small" mr-2 />
+        <uni-tag text="标签" type="primary" un-mr-2 circle />
+        <uni-tag text="标签" type="primary" size="small" un-mr-2 mark />
       </view>
     </uni-section>
 
@@ -164,14 +164,19 @@ const buttonClick = () => {
     </uni-section>
 
     <uni-section title="下拉框">
-      <uni-data-select
-        v-model="selectValue"
-        :localdata="selectOptions"
-      />
+      <view un-px-2>
+        <uni-data-select
+          v-model="selectValue"
+          :localdata="selectOptions"
+        />
+      </view>
     </uni-section>
 
-    <uni-section :title="`日期范围用法：` + `[${datetimeRange}]`" />
-    <uni-datetime-picker v-model="datetimeRange" type="daterange" />
+    <uni-section :title="`日期范围用法：` + `[${datetimeRange}]`">
+      <view un-px-2>
+        <uni-datetime-picker v-model="datetimeRange" type="daterange" />
+      </view>
+    </uni-section>
 
     <uni-section title="商品导航">
       <uni-goods-nav
