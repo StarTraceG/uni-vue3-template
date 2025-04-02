@@ -1,15 +1,38 @@
-import { resolve } from 'node:path'
+import path, { resolve } from 'node:path'
+import process from 'node:process'
 import uni from '@dcloudio/vite-plugin-uni'
 import UniPlatformModifier from '@uni-helper/vite-plugin-uni-platform-modifier'
 import AutoImport from 'unplugin-auto-import/vite'
 import icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import UniPolyfill from 'vite-plugin-uni-polyfill'
 import VueDevTools from 'vite-plugin-vue-devtools'
-import { getRootPath, getSrcPath } from './build/utils'
+import { convertEnv, getRootPath, getSrcPath } from './build/utils'
 
-export default defineConfig(async () => {
+export default defineConfig(async ({ command, mode }) => {
+  // mode: 区分生产环境还是开发环境
+  console.log('command, mode -> ', command, mode)
+  // pnpm dev:h5 时得到 => serve development
+  // pnpm build:h5 时得到 => build production
+  // pnpm dev:mp-weixin 时得到 => build development (注意区别，command为build)
+  // pnpm build:mp-weixin 时得到 => build production
+  // pnpm dev:app 时得到 => build development (注意区别，command为build)
+  // pnpm build:app 时得到 => build production
+  // dev 和 build 命令可以分别使用 .env.development 和 .env.production 的环境变量
+
+  const { UNI_PLATFORM } = process.env
+  console.log('UNI_PLATFORM -> ', UNI_PLATFORM) // 得到 mp-weixin, h5, app 等
+
+  const viteEnv = convertEnv(loadEnv(mode, path.resolve(process.cwd())))
+  const {
+    VITE_PORT,
+    VITE_SERVER_BASEURL,
+    VITE_USE_PROXY,
+    VITE_PROXY_PREFIX,
+  } = viteEnv
+  console.log('环境变量 viteEnv -> ', viteEnv)
+
   const srcPath = getSrcPath()
   const rootPath = getRootPath()
 
@@ -20,6 +43,25 @@ export default defineConfig(async () => {
   const UnoCSS = (await import('unocss/vite')).default
 
   return {
+    server: {
+      host: '0.0.0.0',
+      hmr: true,
+      port: VITE_PORT,
+      // 仅 H5 端生效，其他端不生效（其他端走build，不走devServer)
+      proxy: VITE_USE_PROXY
+        ? {
+            [VITE_PROXY_PREFIX]: {
+              target: VITE_SERVER_BASEURL,
+              changeOrigin: true,
+              rewrite: (path: string) => path.replace(new RegExp(`^${VITE_PROXY_PREFIX}`), ''),
+            },
+          }
+        : undefined,
+    },
+    define: {
+      __UNI_PLATFORM__: JSON.stringify(UNI_PLATFORM),
+      __VITE_APP_PROXY__: VITE_USE_PROXY,
+    },
     resolve: {
       alias: {
         '~': rootPath,

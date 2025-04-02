@@ -22,6 +22,9 @@ export default defineConfig({
         prefix: 'un-',
         prefixedOnly: true,
       },
+      uno: {
+        dark: 'class',
+      },
     }),
     presetIcons({
       scale: 1.2,

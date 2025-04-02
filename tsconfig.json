@@ -18,9 +18,7 @@
       // Wot Design Uni 组件提供 TypeScript 类型，需要安装 wot-design-uni
       "wot-design-uni/global",
       // 为 uni-app 组件提供 TypeScript 类型，需要安装 @uni-helper/uni-types
-      "@uni-helper/uni-types",
-      // 为 pinia-plugin-persist-uni 插件提供 TypeScript 类型，需要安装 pinia-plugin-persist-uni
-      "pinia-plugin-persist-uni"
+      "@uni-helper/uni-types"
     ],
     "allowJs": true,
     "sourceMap": true,

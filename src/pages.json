@@ -15,7 +15,10 @@
     "backgroundColor": "@bgColor", // 下拉显示出来的窗口的背景色
     "backgroundTextStyle": "@bgTxtStyle", // 下拉 loading 的样式
     "backgroundColorTop": "@bgColorTop", // 顶部窗口的背景色（bounce回弹区域）
-    "backgroundColorBottom": "@bgColorBottom" // 底部窗口的背景色（bounce回弹区域）
+    "backgroundColorBottom": "@bgColorBottom", // 底部窗口的背景色（bounce回弹区域）
+    "app-plus": {
+      "titleNView": false // 移除 H5、APP 顶部导航
+    }
   },
   "easycom": {
     "autoscan": true,

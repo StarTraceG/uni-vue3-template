@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import type { PlacementType } from 'wot-design-uni/components/wd-popover/types'
 import type { SignatureResult } from 'wot-design-uni/components/wd-signature/types'
+import { useUserStore } from '@/store/user'
 import { useToast } from 'wot-design-uni'
+
+const userStore = useUserStore()
+const userTheme = userStore.theme
 
 const show = ref<boolean>(false)
 const panels = ref<any[]>([])
@@ -111,187 +115,191 @@ const clearSignature = () => {
 </script>
 
 <template>
-  <div class="px-2 py-2">
-    <wd-divider content-position="left">
-      按钮
-    </wd-divider>
-    <wd-button>主要按钮</wd-button>
-    <wd-button type="success">
-      成功按钮
-    </wd-button>
-    <wd-button type="info">
-      信息按钮
-    </wd-button>
-    <wd-button type="warning">
-      警告按钮
-    </wd-button>
-    <wd-button type="error">
-      危险按钮
-    </wd-button>
-    <wd-button plain>
-      幽灵按钮
-    </wd-button>
-    <wd-button plain hairline>
-      细边框幽灵按钮
-    </wd-button>
+  <view class="app" :class="{ dark: isDark }">
+    <wd-config-provider :theme="userTheme">
+      <div class="px-2 py-2">
+        <wd-divider content-position="left">
+          按钮
+        </wd-divider>
+        <wd-button>主要按钮</wd-button>
+        <wd-button type="success">
+          成功按钮
+        </wd-button>
+        <wd-button type="info">
+          信息按钮
+        </wd-button>
+        <wd-button type="warning">
+          警告按钮
+        </wd-button>
+        <wd-button type="error">
+          危险按钮
+        </wd-button>
+        <wd-button plain>
+          幽灵按钮
+        </wd-button>
+        <wd-button plain hairline>
+          细边框幽灵按钮
+        </wd-button>
 
-    <wd-divider content-position="left">
-      图标
-    </wd-divider>
-    <wd-icon name="check" size="22px" />
-    <wd-icon name="refresh" size="22px" />
-    <wd-icon name="thin-arrow-left" size="22px" />
-    <wd-icon name="close" size="22px" />
-    <wd-icon name="delete-thin" size="22px" />
-    <wd-icon name="camera" size="22px" />
-    <wd-icon name="clock" size="22px" />
-    <wd-icon name="fullsreen" size="22px" />
-    <wd-icon name="fullscreen-exit" size="22px" />
+        <wd-divider content-position="left">
+          图标
+        </wd-divider>
+        <wd-icon name="check" size="22px" />
+        <wd-icon name="refresh" size="22px" />
+        <wd-icon name="thin-arrow-left" size="22px" />
+        <wd-icon name="close" size="22px" />
+        <wd-icon name="delete-thin" size="22px" />
+        <wd-icon name="camera" size="22px" />
+        <wd-icon name="clock" size="22px" />
+        <wd-icon name="fullsreen" size="22px" />
+        <wd-icon name="fullscreen-exit" size="22px" />
 
-    <wd-divider content-position="left">
-      动作面板
-    </wd-divider>
-    <wd-button @click="showActions">
-      弹出菜单
-    </wd-button>
-    <wd-action-sheet v-model="show" :panels="panels" cancel-text="取消" @close="close" @select="select" />
+        <wd-divider content-position="left">
+          动作面板
+        </wd-divider>
+        <wd-button @click="showActions">
+          弹出菜单
+        </wd-button>
+        <wd-action-sheet v-model="show" :panels="panels" cancel-text="取消" @close="close" @select="select" />
 
-    <wd-divider content-position="left">
-      文本脱敏
-    </wd-divider>
-    <wd-text text="诸葛亮" mode="name" :format="true" />
-    <wd-text text="15825266685" mode="phone" :format="true" />
+        <wd-divider content-position="left">
+          文本脱敏
+        </wd-divider>
+        <wd-text text="诸葛亮" mode="name" :format="true" />
+        <wd-text text="15825266685" mode="phone" :format="true" />
 
-    <wd-divider content-position="left">
-      分页
-    </wd-divider>
-    <wd-pagination v-model="page" :total="total" :page-size="pageSize" @change="pageChange" />
+        <wd-divider content-position="left">
+          分页
+        </wd-divider>
+        <wd-pagination v-model="page" :total="total" :page-size="pageSize" @change="pageChange" />
 
-    <wd-divider content-position="left">
-      汽包
-    </wd-divider>
-    <wd-popover v-model="showPopover" mode="menu" :placement="placement" :content="menu" @menuclick="menuclick">
-      <wd-button>操作</wd-button>
-    </wd-popover>
-
-    <wd-divider content-position="left">
-      汽包
-    </wd-divider>
-    <wd-radio-group v-model="radio" cell shape="button">
-      <wd-radio value="1">
-        选项一
-      </wd-radio>
-      <wd-radio value="2">
-        选项二
-      </wd-radio>
-      <wd-radio value="3">
-        选项三
-      </wd-radio>
-      <wd-radio value="4">
-        选项四
-      </wd-radio>
-      <wd-radio value="5">
-        选项五
-      </wd-radio>
-      <wd-radio value="6">
-        选项六
-      </wd-radio>
-      <wd-radio value="7">
-        选项七
-      </wd-radio>
-    </wd-radio-group>
-
-    <wd-divider content-position="left">
-      搜索框
-    </wd-divider>
-    <wd-search v-model="searchValue" placeholder-left cancel-txt="搜索">
-      <template #prefix>
-        <wd-popover mode="menu" :content="searchMenu" @menuclick="changeSearchType">
-          <view class="search-type">
-            <text>{{ searchType }}</text>
-            <wd-icon class="icon-arrow" name="fill-arrow-down" />
-          </view>
+        <wd-divider content-position="left">
+          汽包
+        </wd-divider>
+        <wd-popover v-model="showPopover" mode="menu" :placement="placement" :content="menu" @menuclick="menuclick">
+          <wd-button>操作</wd-button>
         </wd-popover>
-      </template>
-    </wd-search>
 
-    <wd-divider content-position="left">
-      签名
-    </wd-divider>
-    <wd-signature :export-scale="2" @submit="confirmSignature" @clear="clearSignature" />
-    <wd-img v-if="signatureImg.tempFilePath" mode="widthFix" width="100%" :src="signatureImg.tempFilePath" />
+        <wd-divider content-position="left">
+          汽包
+        </wd-divider>
+        <wd-radio-group v-model="radio" cell shape="button">
+          <wd-radio value="1">
+            选项一
+          </wd-radio>
+          <wd-radio value="2">
+            选项二
+          </wd-radio>
+          <wd-radio value="3">
+            选项三
+          </wd-radio>
+          <wd-radio value="4">
+            选项四
+          </wd-radio>
+          <wd-radio value="5">
+            选项五
+          </wd-radio>
+          <wd-radio value="6">
+            选项六
+          </wd-radio>
+          <wd-radio value="7">
+            选项七
+          </wd-radio>
+        </wd-radio-group>
 
-    <wd-divider content-position="left">
-      卡片
-    </wd-divider>
-    <wd-card title="标题内容" type="rectangle">
-      <view style="height: 40px" class="content">
-        <image
-          src="https://img11.360buyimg.com/imagetools/jfs/t1/143248/37/5695/265818/5f3a8546E98d998a4/745897ca9c9e474b.jpg"
-          width="40"
-          height="40"
-          alt="joy"
-          style="width: 40px; height: 40px; margin-right: 12px; border-radius: 4px"
-        />
-        <view>
-          <view class="custom-main">
-            智云好客CRM短信_催评营销<span>
-              sdf</span>
+        <wd-divider content-position="left">
+          搜索框
+        </wd-divider>
+        <wd-search v-model="searchValue" placeholder-left cancel-txt="搜索">
+          <template #prefix>
+            <wd-popover mode="menu" :content="searchMenu" @menuclick="changeSearchType">
+              <view class="search-type">
+                <text>{{ searchType }}</text>
+                <wd-icon class="icon-arrow" name="fill-arrow-down" />
+              </view>
+            </wd-popover>
+          </template>
+        </wd-search>
+
+        <wd-divider content-position="left">
+          签名
+        </wd-divider>
+        <wd-signature :export-scale="2" @submit="confirmSignature" @clear="clearSignature" />
+        <wd-img v-if="signatureImg.tempFilePath" mode="widthFix" width="100%" :src="signatureImg.tempFilePath" />
+
+        <wd-divider content-position="left">
+          卡片
+        </wd-divider>
+        <wd-card title="标题内容" type="rectangle">
+          <view style="height: 40px" class="content">
+            <image
+              src="https://img11.360buyimg.com/imagetools/jfs/t1/143248/37/5695/265818/5f3a8546E98d998a4/745897ca9c9e474b.jpg"
+              width="40"
+              height="40"
+              alt="joy"
+              style="width: 40px; height: 40px; margin-right: 12px; border-radius: 4px"
+            />
+            <view>
+              <view class="custom-main">
+                智云好客CRM短信_催评营销<span>
+                  sdf</span>
+              </view>
+              <view class="custom-sub">
+                高级版 | 周期一年
+              </view>
+            </view>
           </view>
-          <view class="custom-sub">
-            高级版 | 周期一年
-          </view>
-        </view>
-      </view>
-      <template #footer>
-        <view>
-          <wd-button size="small" plain custom-style="margin-right: 8px">
-            评价
-          </wd-button>
-          <wd-button size="small">
-            立即使用
-          </wd-button>
-        </view>
-      </template>
-    </wd-card>
+          <template #footer>
+            <view>
+              <wd-button size="small" plain custom-style="margin-right: 8px">
+                评价
+              </wd-button>
+              <wd-button size="small">
+                立即使用
+              </wd-button>
+            </view>
+          </template>
+        </wd-card>
 
-    <wd-divider content-position="left">
-      图片
-    </wd-divider>
-    <wd-row :gutter="16">
-      <wd-col :span="8">
-        <wd-img
-          width="100"
-          height="100"
-          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-          mode="scaleToFill"
-          :enable-preview="true"
-        />
-      </wd-col>
-      <wd-col :span="8">
-        <wd-img
-          width="100"
-          height="100"
-          :radius="8"
-          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-          mode="scaleToFill"
-          :enable-preview="true"
-        />
-      </wd-col>
-      <wd-col :span="8">
-        <wd-img
-          width="100"
-          height="100"
-          round
-          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-          mode="scaleToFill"
-          :enable-preview="true"
-        />
-      </wd-col>
-    </wd-row>
-  </div>
+        <wd-divider content-position="left">
+          图片
+        </wd-divider>
+        <wd-row :gutter="16">
+          <wd-col :span="8">
+            <wd-img
+              width="100"
+              height="100"
+              src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+              mode="scaleToFill"
+              :enable-preview="true"
+            />
+          </wd-col>
+          <wd-col :span="8">
+            <wd-img
+              width="100"
+              height="100"
+              :radius="8"
+              src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+              mode="scaleToFill"
+              :enable-preview="true"
+            />
+          </wd-col>
+          <wd-col :span="8">
+            <wd-img
+              width="100"
+              height="100"
+              round
+              src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+              mode="scaleToFill"
+              :enable-preview="true"
+            />
+          </wd-col>
+        </wd-row>
+      </div>
 
-  <wd-toast />
+      <wd-toast />
+    </wd-config-provider>
+  </view>
 </template>
 
 <style scoped lang="scss">

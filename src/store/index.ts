@@ -1,6 +1,16 @@
-import piniaPluginPersist from 'pinia-plugin-persist-uni'
+import { createPersistedState } from 'pinia-plugin-persistedstate' // 数据持久化
 
 const store = createPinia()
-store.use(piniaPluginPersist)
+store.use(
+  createPersistedState({
+    storage: {
+      getItem: uni.getStorageSync,
+      setItem: uni.setStorageSync,
+    },
+  }),
+)
 
 export default store
+
+// 模块统一导出
+export * from './user'

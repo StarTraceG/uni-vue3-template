@@ -17,10 +17,6 @@ export default uniHelper(
             max: 1,
           },
         }],
-        // 禁止使用控制台
-        'no-console': 'off',
-        // 制使用 function 而不是箭头函数或函数表达式来声明顶级函数
-        'antfu/top-level-function': 'off',
       },
     },
     formatters: true,
@@ -28,5 +24,13 @@ export default uniHelper(
     ignores: [
       // ...globs
     ],
+  },
+  {
+    rules: {
+      // 禁止使用控制台
+      'no-console': 'off',
+      // 制使用 function 而不是箭头函数或函数表达式来声明顶级函数
+      'antfu/top-level-function': 'off',
+    },
   },
 )
