@@ -122,7 +122,7 @@ importers:
         version: 1.0.0-alpha.6(@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(@uni-helper/uni-cloud-types@1.0.0-alpha.6(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(@uni-helper/uni-ui-types@1.0.0-alpha.6(@uni-helper/uni-app-types@1.0.0-alpha.6(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))
       '@uni-helper/unocss-preset-uni':
         specifier: ^0.2.11
-        version: 0.2.11(@unocss/preset-legacy-compat@66.0.0)(@unocss/preset-mini@66.0.0)(@unocss/rule-utils@66.1.0-beta.5)(@unocss/vite@66.0.0(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))(unocss-applet@0.9.0(@unocss/core@66.1.0-beta.5)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))))(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))
+        version: 0.2.11(@unocss/preset-legacy-compat@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/rule-utils@66.1.0-beta.5)(@unocss/vite@66.0.0(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))(unocss-applet@0.9.0(@unocss/core@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))))(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))
       '@uni-helper/vite-plugin-uni-platform-modifier':
         specifier: ^0.0.2
         version: 0.0.2
@@ -162,9 +162,6 @@ importers:
       postcss-html:
         specifier: ^1.8.0
         version: 1.8.0
-      postcss-less:
-        specifier: ^6.0.0
-        version: 6.0.0(postcss@8.5.3)
       postcss-scss:
         specifier: ^4.0.9
         version: 4.0.9(postcss@8.5.3)
@@ -183,18 +180,21 @@ importers:
       stylelint-config-recess-order:
         specifier: ^6.0.0
         version: 6.0.0(stylelint@16.15.0(typescript@5.8.2))
+      stylelint-config-recommended:
+        specifier: ^15.0.0
+        version: 15.0.0(stylelint@16.15.0(typescript@5.8.2))
+      stylelint-config-recommended-scss:
+        specifier: ^14.1.0
+        version: 14.1.0(postcss@8.5.3)(stylelint@16.15.0(typescript@5.8.2))
       stylelint-config-recommended-vue:
         specifier: ^1.6.0
         version: 1.6.0(postcss-html@1.8.0)(stylelint@16.15.0(typescript@5.8.2))
-      stylelint-config-standard:
-        specifier: ^37.0.0
-        version: 37.0.0(stylelint@16.15.0(typescript@5.8.2))
-      stylelint-config-standard-scss:
-        specifier: ^14.0.0
-        version: 14.0.0(postcss@8.5.3)(stylelint@16.15.0(typescript@5.8.2))
       stylelint-order:
         specifier: ^6.0.4
         version: 6.0.4(stylelint@16.15.0(typescript@5.8.2))
+      stylelint-prettier:
+        specifier: ^5.0.3
+        version: 5.0.3(prettier@3.5.3)(stylelint@16.15.0(typescript@5.8.2))
       typescript:
         specifier: ^5.7.3
         version: 5.8.2
@@ -203,7 +203,7 @@ importers:
         version: 66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))
       unocss-applet:
         specifier: ^0.9.0
-        version: 0.9.0(@unocss/core@66.1.0-beta.5)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))
+        version: 0.9.0(@unocss/core@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))
       unplugin-auto-import:
         specifier: ^19.1.1
         version: 19.1.1(@nuxt/kit@3.16.2)(@vueuse/core@13.0.0(vue@3.5.13(typescript@5.8.2)))
@@ -2045,6 +2045,9 @@ packages:
   '@unocss/core@66.1.0-beta.5':
     resolution: {integrity: sha512-1kZzSrB87KKd+xP+vMN7IP03j2UPEykna447aw3UaK5RYTDd/LuVtxoep6gvjN9TJiB4K+Qx0sAtgnfhPpka9Q==}
 
+  '@unocss/core@66.1.0-beta.8':
+    resolution: {integrity: sha512-j56/9COPQ09+g0EittHtAmddRU4X0HgQ+Fz5hK+I894boljGNG6kI1vj5Gi0C/tllddrH/CbTdJ1K6RumSAK8w==}
+
   '@unocss/eslint-config@66.0.0':
     resolution: {integrity: sha512-xTMbWe8a51IpdcipV0mwbc2uYldY+dNKPGEF8TFAEvVH8zQvtMxuOKC1itOPe29o4dm/TABK/p+Gxt44RL/ISw==}
     engines: {node: '>=14'}
@@ -2075,8 +2078,8 @@ packages:
   '@unocss/preset-icons@66.0.0':
     resolution: {integrity: sha512-6ObwTvEGuPBbKWRoMMiDioHtwwQTFI5oojFLJ32Y8tW6TdXvBLkO88d7qpgQxEjgVt4nJrqF1WEfR4niRgBm0Q==}
 
-  '@unocss/preset-legacy-compat@66.0.0':
-    resolution: {integrity: sha512-NpMyzNVkVDGt9nO1n7dZLBDvzAkUu2hCR3ePY//xnUn7Syl5SwPdCEuc7FzHHb/rdSVVsip1cvFEaThO2FnUXQ==}
+  '@unocss/preset-legacy-compat@66.1.0-beta.8':
+    resolution: {integrity: sha512-fqVK+bzqdRKwTcdiKXa7F912HpqVMOmo7t8aM2RA+0nO3rE0MGsbY5RUj8Ss32SGRtF9M0mSqfVYzkoGwo2G4g==}
 
   '@unocss/preset-mini@66.0.0':
     resolution: {integrity: sha512-d62eACnuKtR0dwCFOQXgvw5VLh5YSyK56xCzpHkh0j0GstgfDLfKTys0T/XVAAvdSvAy/8A8vhSNJ4PlIc9V2A==}
@@ -4935,12 +4938,6 @@ packages:
     peerDependencies:
       postcss: ^8.0.0
 
-  postcss-less@6.0.0:
-    resolution: {integrity: sha512-FPX16mQLyEjLzEuuJtxA8X3ejDLNGGEG503d2YGZR5Ask1SpDN8KmZUMpzCvyalWRywAn1n1VOA5dcqfCLo5rg==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      postcss: ^8.3.5
-
   postcss-load-config@3.1.4:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
@@ -5509,32 +5506,17 @@ packages:
     peerDependencies:
       stylelint: ^16.13.0
 
-  stylelint-config-standard-scss@14.0.0:
-    resolution: {integrity: sha512-6Pa26D9mHyi4LauJ83ls3ELqCglU6VfCXchovbEqQUiEkezvKdv6VgsIoMy58i00c854wVmOw0k8W5FTpuaVqg==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      postcss: ^8.3.3
-      stylelint: ^16.11.0
-    peerDependenciesMeta:
-      postcss:
-        optional: true
-
-  stylelint-config-standard@36.0.1:
-    resolution: {integrity: sha512-8aX8mTzJ6cuO8mmD5yon61CWuIM4UD8Q5aBcWKGSf6kg+EC3uhB+iOywpTK4ca6ZL7B49en8yanOFtUW0qNzyw==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      stylelint: ^16.1.0
-
-  stylelint-config-standard@37.0.0:
-    resolution: {integrity: sha512-+6eBlbSTrOn/il2RlV0zYGQwRTkr+WtzuVSs1reaWGObxnxLpbcspCUYajVQHonVfxVw2U+h42azGhrBvcg8OA==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      stylelint: ^16.13.0
-
   stylelint-order@6.0.4:
     resolution: {integrity: sha512-0UuKo4+s1hgQ/uAxlYU4h0o0HS4NiQDud0NAUNI0aa8FJdmYHA5ZZTFHiV5FpmE3071e9pZx5j0QpVJW5zOCUA==}
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0 || ^16.0.1
+
+  stylelint-prettier@5.0.3:
+    resolution: {integrity: sha512-B6V0oa35ekRrKZlf+6+jA+i50C4GXJ7X1PPmoCqSUoXN6BrNF6NhqqhanvkLjqw2qgvrS0wjdpeC+Tn06KN3jw==}
+    engines: {node: '>=18.12.0'}
+    peerDependencies:
+      prettier: '>=3.0.0'
+      stylelint: '>=16.0.0'
 
   stylelint-scss@6.11.1:
     resolution: {integrity: sha512-e4rYo0UY+BIMtGeGanghrvHTjcryxgZbyFxUedp8dLFqC4P70aawNdYjRrQxbnKhu3BNr4+lt5e/53tcKXiwFA==}
@@ -8817,13 +8799,13 @@ snapshots:
       typescript: 5.8.2
       vue: 3.5.13(typescript@5.8.2)
 
-  '@uni-helper/unocss-preset-uni@0.2.11(@unocss/preset-legacy-compat@66.0.0)(@unocss/preset-mini@66.0.0)(@unocss/rule-utils@66.1.0-beta.5)(@unocss/vite@66.0.0(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))(unocss-applet@0.9.0(@unocss/core@66.1.0-beta.5)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))))(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))':
+  '@uni-helper/unocss-preset-uni@0.2.11(@unocss/preset-legacy-compat@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/rule-utils@66.1.0-beta.5)(@unocss/vite@66.0.0(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))(unocss-applet@0.9.0(@unocss/core@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))))(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))':
     dependencies:
       '@uni-helper/uni-env': 0.1.7
-      '@unocss/preset-legacy-compat': 66.0.0
+      '@unocss/preset-legacy-compat': 66.1.0-beta.8
       '@unocss/rule-utils': 66.1.0-beta.5
       unocss: 66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))
-      unocss-applet: 0.9.0(@unocss/core@66.1.0-beta.5)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))
+      unocss-applet: 0.9.0(@unocss/core@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2)))
     optionalDependencies:
       '@unocss/preset-mini': 66.0.0
       '@unocss/vite': 66.0.0(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))
@@ -8836,21 +8818,21 @@ snapshots:
       fast-glob: 3.3.3
       magic-string: 0.30.17
 
-  '@unocss-applet/preset-applet@0.9.0(@unocss/core@66.1.0-beta.5)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)':
+  '@unocss-applet/preset-applet@0.9.0(@unocss/core@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)':
     optionalDependencies:
-      '@unocss/core': 66.1.0-beta.5
+      '@unocss/core': 66.1.0-beta.8
       '@unocss/preset-mini': 66.0.0
       '@unocss/preset-uno': 66.0.0
 
-  '@unocss-applet/preset-rem-rpx@0.9.0(@unocss/core@66.1.0-beta.5)':
+  '@unocss-applet/preset-rem-rpx@0.9.0(@unocss/core@66.1.0-beta.8)':
     dependencies:
-      '@unocss/core': 66.1.0-beta.5
+      '@unocss/core': 66.1.0-beta.8
 
-  '@unocss-applet/transformer-attributify@0.9.0(@unocss/core@66.1.0-beta.5)':
+  '@unocss-applet/transformer-attributify@0.9.0(@unocss/core@66.1.0-beta.8)':
     dependencies:
       magic-string: 0.30.17
     optionalDependencies:
-      '@unocss/core': 66.1.0-beta.5
+      '@unocss/core': 66.1.0-beta.8
 
   '@unocss/astro@66.0.0(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))':
     dependencies:
@@ -8891,6 +8873,8 @@ snapshots:
   '@unocss/core@66.0.0': {}
 
   '@unocss/core@66.1.0-beta.5': {}
+
+  '@unocss/core@66.1.0-beta.8': {}
 
   '@unocss/eslint-config@66.0.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)':
     dependencies:
@@ -8962,9 +8946,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@unocss/preset-legacy-compat@66.0.0':
+  '@unocss/preset-legacy-compat@66.1.0-beta.8':
     dependencies:
-      '@unocss/core': 66.0.0
+      '@unocss/core': 66.1.0-beta.8
 
   '@unocss/preset-mini@66.0.0':
     dependencies:
@@ -12392,10 +12376,6 @@ snapshots:
       read-cache: 1.0.0
       resolve: 1.22.10
 
-  postcss-less@6.0.0(postcss@8.5.3):
-    dependencies:
-      postcss: 8.5.3
-
   postcss-load-config@3.1.4(postcss@8.5.3):
     dependencies:
       lilconfig: 2.1.0
@@ -12959,28 +12939,16 @@ snapshots:
     dependencies:
       stylelint: 16.15.0(typescript@5.8.2)
 
-  stylelint-config-standard-scss@14.0.0(postcss@8.5.3)(stylelint@16.15.0(typescript@5.8.2)):
-    dependencies:
-      stylelint: 16.15.0(typescript@5.8.2)
-      stylelint-config-recommended-scss: 14.1.0(postcss@8.5.3)(stylelint@16.15.0(typescript@5.8.2))
-      stylelint-config-standard: 36.0.1(stylelint@16.15.0(typescript@5.8.2))
-    optionalDependencies:
-      postcss: 8.5.3
-
-  stylelint-config-standard@36.0.1(stylelint@16.15.0(typescript@5.8.2)):
-    dependencies:
-      stylelint: 16.15.0(typescript@5.8.2)
-      stylelint-config-recommended: 14.0.1(stylelint@16.15.0(typescript@5.8.2))
-
-  stylelint-config-standard@37.0.0(stylelint@16.15.0(typescript@5.8.2)):
-    dependencies:
-      stylelint: 16.15.0(typescript@5.8.2)
-      stylelint-config-recommended: 15.0.0(stylelint@16.15.0(typescript@5.8.2))
-
   stylelint-order@6.0.4(stylelint@16.15.0(typescript@5.8.2)):
     dependencies:
       postcss: 8.5.3
       postcss-sorting: 8.0.2(postcss@8.5.3)
+      stylelint: 16.15.0(typescript@5.8.2)
+
+  stylelint-prettier@5.0.3(prettier@3.5.3)(stylelint@16.15.0(typescript@5.8.2)):
+    dependencies:
+      prettier: 3.5.3
+      prettier-linter-helpers: 1.0.0
       stylelint: 16.15.0(typescript@5.8.2)
 
   stylelint-scss@6.11.1(stylelint@16.15.0(typescript@5.8.2)):
@@ -13298,11 +13266,11 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unocss-applet@0.9.0(@unocss/core@66.1.0-beta.5)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))):
+  unocss-applet@0.9.0(@unocss/core@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)(unocss@66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))):
     dependencies:
-      '@unocss-applet/preset-applet': 0.9.0(@unocss/core@66.1.0-beta.5)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)
-      '@unocss-applet/preset-rem-rpx': 0.9.0(@unocss/core@66.1.0-beta.5)
-      '@unocss-applet/transformer-attributify': 0.9.0(@unocss/core@66.1.0-beta.5)
+      '@unocss-applet/preset-applet': 0.9.0(@unocss/core@66.1.0-beta.8)(@unocss/preset-mini@66.0.0)(@unocss/preset-uno@66.0.0)
+      '@unocss-applet/preset-rem-rpx': 0.9.0(@unocss/core@66.1.0-beta.8)
+      '@unocss-applet/transformer-attributify': 0.9.0(@unocss/core@66.1.0-beta.8)
       unocss: 66.0.0(postcss@8.5.3)(vite@5.2.8(@types/node@22.13.10)(sass@1.78.0)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))
     optionalDependencies:
       '@unocss/preset-uno': 66.0.0
