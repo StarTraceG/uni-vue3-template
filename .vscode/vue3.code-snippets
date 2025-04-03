@@ -1,0 +1,40 @@
+{
+  "Print Vue3 SFC": {
+    "scope": "vue",
+    "prefix": "v3",
+    "body": [
+      "<route lang=\"json5\" type=\"page\">",
+      "{",
+      "  layout: 'default',",
+      "  style: {",
+      "    navigationBarTitleText: '$1',",
+      "  },",
+      "}",
+      "</route>\n",
+      "<script lang=\"ts\" setup>",
+      "//$3",
+      "</script>\n",
+      "<template>",
+      "  <view class=\"\">$2</view>",
+      "</template>\n",
+      "<style lang=\"scss\" scoped>",
+      "//$4",
+      "</style>\n",
+    ],
+  },
+  "Print style": {
+    "scope": "vue",
+    "prefix": "sss",
+    "body": ["<style lang=\"scss\" scoped>", "//", "</style>\n"],
+  },
+  "Print script": {
+    "scope": "vue",
+    "prefix": "sst",
+    "body": ["<script lang=\"ts\" setup>", "//$3", "</script>\n"],
+  },
+  "Print unibest template": {
+    "scope": "vue",
+    "prefix": "te",
+    "body": ["<template>", "  <view class=\"\">$1</view>", "</template>\n"],
+  },
+}

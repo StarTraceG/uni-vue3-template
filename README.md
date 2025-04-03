@@ -1,5 +1,7 @@
 # 一个Uniapp的起始模版，Vite,Vue3,TypeScript
 
+此模版模板基于 [unibest](https://github.com/feige996/unibest) 和 [uniapp-template](https://github.com/yang1206/uniapp-template) 进行修改，并添加了部分功能。
+
 ## 所用技术栈
 
 - 依赖管理：node v20.x, 如果你已经使用 nvm，可以参考 [Github: nvm](https://github.com/nvm-sh/nvm#deeper-shell-integration) 来实现 node 版本的自动切换
@@ -73,3 +75,8 @@ npx @eslint/config-inspector
 ```bash
 pnpm build:对应平台 如 pnpm build:mp-weixin
 ```
+
+## 感谢
+
+- [unibest](https://github.com/feige996/unibest)
+- [uniapp-template](https://github.com/yang1206/uniapp-template)
