@@ -1,6 +1,8 @@
 import path, { resolve } from 'node:path'
 import process from 'node:process'
 import uni from '@dcloudio/vite-plugin-uni'
+import UniLayouts from '@uni-helper/vite-plugin-uni-layouts'
+import UniPages from '@uni-helper/vite-plugin-uni-pages'
 import UniPlatformModifier from '@uni-helper/vite-plugin-uni-platform-modifier'
 import AutoImport from 'unplugin-auto-import/vite'
 import icons from 'unplugin-icons/vite'
@@ -69,6 +71,24 @@ export default defineConfig(async ({ command, mode }) => {
       },
     },
     plugins: [
+      /**
+       * uni-pages
+       * @see https://github.com/uni-helper/vite-plugin-uni-pages
+       */
+      UniPages({
+        dts: 'types/uni-pages.d.ts', // 为页面路径生成 TypeScript 声明
+        homePage: 'pages/index/index', // 默认路由入口
+        subPackages: ['src/uni-ui', 'src/uv-ui', 'src/wot-design-uni'], // subPackages 扫描的目录，是个数组，可以配置多个，分包的目录不能为 src/pages 里面的子目录
+        exclude: ['**/components/**/**.*'], // 排除的页面，相对于 dir 和 subPackages
+        routeBlockLang: 'json5', // 自定义块语言，虽然设了默认值，但是vue文件还是要加上 lang="json5", 这样才能很好地格式化
+      }),
+
+      /**
+       * uni-layouts
+       * @see https://github.com/uni-helper/vite-plugin-uni-layouts
+       */
+      UniLayouts(),
+
       /**
        * unocss
        * @see https://github.com/antfu/unocss

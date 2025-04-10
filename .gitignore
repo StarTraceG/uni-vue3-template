@@ -1,6 +1,14 @@
 # 生成文件
+# unplugin-auto-import 生成的类型文件
 types/components.d.ts
+# unplugin-vue-components 生成的类型文件
 types/auto-imports.d.ts
+# vite-plugin-uni-pages 生成的类型文件
+types/uni-pages.d.ts
+
+# 插件生成的文件
+src/pages.json
+src/manifest.json
 
 # 其他包管理器LOCK文件
 package-lock.json

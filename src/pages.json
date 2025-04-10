@@ -1,54 +1,56 @@
 {
-  // 主包
-  "pages": [
-    {
-      "path": "pages/index",
-      "style": {
-        "navigationBarTitleText": "uni-vue3-template"
-      }
-    }
-  ],
   "globalStyle": {
-    "navigationBarTitleText": "uni-vue3-template", // 导航栏标题
-    "navigationBarBackgroundColor": "@navBgColor", // 顶部导航栏背景色
-    "navigationBarTextStyle": "@navTxtStyle", // 导航栏标题颜色及状态栏前景颜色
-    "backgroundColor": "@bgColor", // 下拉显示出来的窗口的背景色
-    "backgroundTextStyle": "@bgTxtStyle", // 下拉 loading 的样式
-    "backgroundColorTop": "@bgColorTop", // 顶部窗口的背景色（bounce回弹区域）
-    "backgroundColorBottom": "@bgColorBottom", // 底部窗口的背景色（bounce回弹区域）
-    "app-plus": {
-      "titleNView": false // 移除 H5、APP 顶部导航
+    "navigationBarTitleText": "uni-vue3-template",
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "@navTxtStyle",
+    "backgroundColor": "@bgColor",
+    "backgroundTextStyle": "@bgTxtStyle",
+    "backgroundColorTop": "@bgColorTop",
+    "backgroundColorBottom": "@bgColorBottom",
+    "h5": {
+      "navigationStyle": "custom"
     }
   },
   "easycom": {
     "autoscan": true,
     "custom": {
-      // Wot Design Uni 组件自动引入
       "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue",
-      // uni-ui 组件自动引入
       "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
-      // uv-ui 组件自动引入
       "^uv-(.*)": "@climblee/uv-ui/components/uv-$1/uv-$1.vue"
     }
   },
-  // 分包配置
+  "__esModule": true,
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "type": "home",
+      "layout": "wotdemo",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "uni-vue3-template"
+      }
+    }
+  ],
   "subPackages": [
     {
-      "root": "pages/wot-design-uni",
+      "root": "uni-ui",
       "pages": [
         {
           "path": "index",
+          "type": "page",
+          "layout": "default",
           "style": {
-            "navigationBarTitleText": "Wot Design Uni 示例"
+            "navigationBarTitleText": "uni-ui 示例"
           }
         }
       ]
     },
     {
-      "root": "pages/uv-ui",
+      "root": "uv-ui",
       "pages": [
         {
           "path": "index",
+          "type": "page",
           "style": {
             "navigationBarTitleText": "uv-ui 示例"
           }
@@ -56,12 +58,14 @@
       ]
     },
     {
-      "root": "pages/uni-ui",
+      "root": "wot-design-uni",
       "pages": [
         {
           "path": "index",
+          "type": "page",
+          "layout": "wotdemo",
           "style": {
-            "navigationBarTitleText": "uni-ui 示例"
+            "navigationBarTitleText": "Wot Design Uni 示例"
           }
         }
       ]

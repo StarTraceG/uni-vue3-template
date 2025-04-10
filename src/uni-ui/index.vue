@@ -1,3 +1,12 @@
+<route lang="json5" type="page">
+{
+  layout: 'default',
+  style: {
+    navigationBarTitleText: 'uni-ui 示例'
+  },
+}
+</route>
+
 <script setup lang="ts">
 import type { UniGoodsNavOption } from '@uni-helper/uni-types'
 

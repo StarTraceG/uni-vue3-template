@@ -1,3 +1,11 @@
+<route lang="json5" type="page">
+{
+  style: {
+    navigationBarTitleText: 'uv-ui 示例'
+  },
+}
+</route>
+
 <script setup lang="ts">
 const uvSwitch1 = ref(false)
 const uvSwitch2 = ref(true)

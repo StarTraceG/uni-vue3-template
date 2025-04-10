@@ -89,6 +89,8 @@
     "@uni-helper/eslint-config": "^0.4.0",
     "@uni-helper/uni-types": "1.0.0-alpha.6",
     "@uni-helper/unocss-preset-uni": "^0.2.11",
+    "@uni-helper/vite-plugin-uni-layouts": "^0.1.10",
+    "@uni-helper/vite-plugin-uni-pages": "^0.2.28",
     "@uni-helper/vite-plugin-uni-platform-modifier": "^0.0.2",
     "@unocss/eslint-config": "^66.0.0",
     "@unocss/eslint-plugin": "66.1.0-beta.5",
