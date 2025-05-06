@@ -3,4 +3,37 @@ declare module '@climblee/uv-ui' {
   export default uvUI
 }
 
+declare module 'qs'
+
 declare const __VITE_APP_PROXY__: true | false
+
+declare const __UNI_PLATFORM__:
+  | 'h5'
+  | 'app'
+  | 'mp-alipay'
+  | 'mp-baidu'
+  | 'mp-jd'
+  | 'mp-kuaishou'
+  | 'mp-lark'
+  | 'mp-qq'
+  | 'mp-toutiao'
+  | 'mp-weixin'
+  | 'quickapp-webview'
+  | 'quickapp-webview-huawei'
+  | 'quickapp-webview-union'
+
+declare interface IHttpResult<T = any> {
+  code?: number
+  message?: string
+  listData?: T
+  singleData?: T
+}
+
+// uni.uploadFile文件上传参数
+declare interface IUniUploadFileOptions {
+  file?: File
+  files?: UniApp.UploadFileOptionFiles[]
+  filePath?: string
+  name?: string
+  formData?: any
+}

@@ -46,7 +46,7 @@
     "lint:fix": "eslint . --fix",
     "lint:lint-staged": "lint-staged",
     "lint:style": "stylelint --cache \"**/*.{vue,scss,css}\" --fix",
-    "commit": "git pull && git add . && npx git-cz && git push"
+    "commit": "git pull && npx git-cz && git push"
   },
   "dependencies": {
     "@climblee/uv-ui": "^1.1.20",

@@ -4,7 +4,6 @@
   "description": "",
   "versionName": "1.0.0",
   "versionCode": "100",
-  "transformPx": false,
   "uniStatistics": {
     "enable": false
   },
@@ -15,8 +14,7 @@
     "splashscreen": {
       "alwaysShowBeforeRender": true,
       "waiting": true,
-      "autoclose": true,
-      "delay": 0
+      "autoclose": true
     },
     "modules": {},
     "distribute": {
