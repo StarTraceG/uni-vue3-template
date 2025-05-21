@@ -3,6 +3,7 @@
     "pages.json": "jsonc",
     "manifest.json": "jsonc"
   },
+  "editor.guides.bracketPairs": "active",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit",

@@ -11,5 +11,4 @@ onThemeChange((val) => {
 
 <style lang="scss">
 @import '@climblee/uv-ui/index';
-@import './styles/main';
 </style>

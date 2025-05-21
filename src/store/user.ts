@@ -1,3 +1,5 @@
+const initState = { nickname: '', avatar: '' }
+
 export const useUserStore = defineStore(
   'user',
   () => {
@@ -7,9 +9,24 @@ export const useUserStore = defineStore(
       theme.value = val
     }
 
+    const userInfo = ref<IUserInfo>({ ...initState })
+
+    const setUserInfo = (val: IUserInfo) => {
+      userInfo.value = val
+    }
+
+    const clearUserInfo = () => {
+      userInfo.value = { ...initState }
+    }
+    const isLogined = computed(() => !!userInfo.value.token)
+
     return {
       theme,
       setTheme,
+      userInfo,
+      setUserInfo,
+      clearUserInfo,
+      isLogined,
     }
   },
   {

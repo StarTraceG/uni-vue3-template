@@ -1,9 +1,14 @@
+:root,
 page {
   box-sizing: border-box;
+  // 修改按主题色
+  // --wot-color-theme: #37c2bc;
+
+  // 修改按钮背景色
+  // --wot-button-primary-bg-color: green;
 }
 
 .app {
-  min-height: 100vh;
   color: #09090b;
   background: #fff;
 }
@@ -15,7 +20,12 @@ page {
 
 // Wot 的深色模式全局样式
 // https://wot-design-uni.netlify.app/component/config-provider.html
-.wot-theme-dark .dark {
+.wot-theme-dark .app {
+  color: #f2f2f2;
+  background-color: #0c0a09;
+}
+
+.wot-theme-dark {
   color: #f2f2f2;
   background-color: #0c0a09;
 }

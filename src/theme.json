@@ -16,8 +16,8 @@
     // "selectedIconPath2": "/static/selected_icon2_light.png"
   },
   "dark": {
-    "bgColor": "#1f1f1f",
-    "bgColorBottom": "#1f1f1f",
+    "bgColor": "#0c0a09",
+    "bgColorBottom": "#0c0a09",
     "bgColorTop": "#292929",
     "bgTxtStyle": "dark",
     "navBgColor": "#292929",

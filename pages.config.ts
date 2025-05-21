@@ -24,4 +24,36 @@ export default defineUniPages({
       '^uv-(.*)': '@climblee/uv-ui/components/uv-$1/uv-$1.vue',
     },
   },
+  tabBar: {
+    custom: true,
+    color: '#000000',
+    selectedColor: '#4d80f0',
+    backgroundColor: '#F8F8F8',
+    borderStyle: 'black',
+    height: '50px',
+    fontSize: '10px',
+    iconWidth: '24px',
+    spacing: '3px',
+    list: [
+      // 注意tabbar路由需要使用 layout:tabbar 布局
+      {
+        pagePath: 'pages/index/index',
+        text: '首页',
+        icon: 'i-ant-design-home-outlined',
+        iconType: 'unocss',
+      },
+      {
+        pagePath: 'pages/msg/index',
+        text: '消息',
+        icon: 'i-ant-design-message-outlined',
+        iconType: 'unocss',
+      },
+      {
+        pagePath: 'pages/my/index',
+        text: '我的',
+        icon: 'i-ant-design-user-outlined',
+        iconType: 'unocss',
+      },
+    ],
+  },
 })

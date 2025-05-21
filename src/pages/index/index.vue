@@ -1,9 +1,9 @@
 <route lang="json5" type="home">
 {
-  layout: 'wotdemo',
+  layout: 'tabbar',
   style: {
     navigationStyle: 'custom',
-    navigationBarTitleText: 'uni-vue3-template'
+    navigationBarTitleText: '首页'
   }
 }
 </route>
@@ -13,10 +13,13 @@ import { useUserStore } from '@/store/user'
 
 const userStore = useUserStore()
 const userTheme = computed(() => userStore.theme)
+
+// 获取屏幕边界到安全区域距离
+const { safeAreaInsets } = uni.getSystemInfoSync()
 </script>
 
 <template>
-  <div class="app" :class="{ dark: isDark }">
+  <div class="app" :class="{ dark: isDark }" :style="{ marginTop: `${safeAreaInsets?.top}px` }">
     <view class="px-4 py-4 text-center">
       <AppLogos />
     </view>
@@ -58,4 +61,8 @@ const userTheme = computed(() => userStore.theme)
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.app {
+  min-height: calc(100vh - 50px - var(--window-bottom));
+}
+</style>
