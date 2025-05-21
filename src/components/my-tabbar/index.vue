@@ -38,7 +38,6 @@ onLoad(() => {
     placeholder
     fixed
     shape="round"
-    custom-style="background: rgba(255, 255, 255, 0.9)"
     @change="selectTabBar"
   >
     <block v-for="(item, idx) in tabbarList" :key="item.path">

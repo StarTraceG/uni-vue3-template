@@ -14,7 +14,7 @@
   - [Prettier](https://prettier.io/)
   - [Stylelint](https://stylelint.io/)
 - 提交规范：
-  - [husky](https://typicode.github.io/husky/#/)
+  - [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks)
   - [lint-staged](https://www.npmjs.com/package/lint-staged)
   - [commitlint](https://commitlint.js.org/#/)
 - 原子化 CSS 引擎：[UnoCSS](https://github.com/unocss/unocss)
