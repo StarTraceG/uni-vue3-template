@@ -1,9 +1,8 @@
 import { useUserStore } from '@/store/user'
 
-const userStore = useUserStore()
-
 export const isDark = useDark()
 export function toggleDark() {
+  const userStore = useUserStore()
   userStore.setTheme(isDark.value ? 'light' : 'dark')
   return isDark.value = !isDark.value
 }
